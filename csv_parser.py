@@ -5,19 +5,19 @@ import csv
 
 
 def parse_input():
-    "Parse user input"
+  "Parse user input"
 
-    parser = argparse.ArgumentParser(description='CSV Parser')
+  parser = argparse.ArgumentParser(description='CSV Parser')
 
-    parser.add_argument('--file', required=True, help='File to parse')
+  parser.add_argument('--file', required=True, help='File to parse')
 
-    parser.add_argument('--column', required=True, type=int, help='The column number indexed from 0')
+  parser.add_argument('--column', required=True, type=int, help='The column number indexed from 0')
 
-    parser.add_argument('--delimiter', choices=['tab', 'comma', 'pipe'], default='tab')
+  parser.add_argument('--delimiter', choices=['tab', 'comma', 'pipe'], default='tab')
 
-    args = parser.parse_args()
+  args = parser.parse_args()
 
-    return args
+  return args
 
 
 def set_delimiter(delimiter):
